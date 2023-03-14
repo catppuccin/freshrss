@@ -20,7 +20,6 @@
     --frss-background-color-transparent: #1e1e2e;
 }
 
-
 /*=== GENERAL */
 /*============*/
 
@@ -70,9 +69,9 @@ textarea {
     margin: 5px;
     padding: 5px;
     color: var(--text);
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     border-radius: 6px;
-    border-color: var(--border);
+    border-color: var(--accent);
     background-color: var(--bg);
     min-height: 25px;
     line-height: 25px;
