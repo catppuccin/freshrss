@@ -1,23 +1,24 @@
 @charset "UTF-8";
 
 :root {
-    /* Set sans-serif & mono fonts */
-    --sans-font: Inter, Lato, Helvetica, "IBM Plex Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Nimbus Sans L", Avenir, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
-    --mono-font: "mononoki Nerd Font", "IBM Plex Mono", "Roboto Mono", "Ubuntu Mono", "Fira Code", "Overpass Mono", Monaco, "Droid Sans Mono", monospace;
-    /*This is my dark themed color scheme*/
-    --bg: #303446;
-    --accent-bg: rgb(41, 44, 60);
-    --text: #c6d0f5;
-    --text-light: #b5bfe2;
-    --border: #292c3c;
-    --accent: #a5adce;
-    --accent-light: #e78284;
-    --code: #ef9f76;
-    --alert: #a6d189;
-    --alert-bg: #85c1dc;
-    --code-bg: #414559;
+  /* Set sans-serif & mono fonts */
+  --sans-font: Inter, Lato, Helvetica, "IBM Plex Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Nimbus Sans L", Avenir, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+  --mono-font: "mononoki Nerd Font", "IBM Plex Mono", "Roboto Mono", "Ubuntu Mono", "Fira Code", "Overpass Mono", Monaco, "Droid Sans Mono", monospace;
+  /*This is my dark themed color scheme*/
+  --bg: #303446;
+  --accent-bg: rgb(41, 44, 60);
+  --text: #c6d0f5;
+  --text-light: #b5bfe2;
+  --border: #292c3c;
+  --accent: #a5adce;
+  --accent-light: #e78284;
+  --code: #ef9f76;
+  --alert: #a6d189;
+  --alert-bg: #85c1dc;
+  --code-bg: #414559;
+  --hover: #626880;
 
-    --frss-background-color-transparent: #303446;
+  --frss-background-color-transparent: #303446;
 }
 
 /*=== GENERAL */
@@ -25,8 +26,8 @@
 
 @font-face {
   /*	src: local('Open Sans'), local('OpenSans'),
-  url('../fonts/OpenSans.woff2') format('woff2'),
-  url('../fonts/OpenSans.woff') format('woff');*/
+		url('../fonts/OpenSans.woff2') format('woff2'),
+		url('../fonts/OpenSans.woff') format('woff');*/
 }
 
 html,
@@ -81,7 +82,7 @@ textarea {
 input:disabled,
 select:disabled {
   color: #aaa;
-  border-color: var(--border);
+  border-color: var(--accent);
 }
 
 button {
@@ -528,7 +529,7 @@ li.item.active {
 }
 
 .item.feed:hover {
-  background-color: var(--accent-bg);
+  background-color: var(--hover);
   transition: .4s;
 }
 
@@ -599,20 +600,14 @@ li.item.active {
   text-align: center;
 }
 
-
-.flux_header:hover {
-  background-color: var(--accent-bg);
-  transition: .4s;
-
+.flux:not(.current) .flux_header:hover,
+.flux:not(.current) .flux_header:hover .item.title {
+  background-color: var(--hover);
+  transition: false;
 }
 
 .flux.current {
   background: var(--accent-bg);
-}
-
-.flux:not(.current):hover .item.title {
-  background: var(--accent-bg);
-  transition: .4s;
 }
 
 .flux .item.title a {
@@ -769,27 +764,27 @@ li.item.active {
   .flux_content .bottom,
   .pagination,
   #nav_entries {
-      display: none;
+    display: none;
   }
 
   html,
   body {
-      background: #fff;
-      color: #000;
-      font-family: Serif;
+    background: #fff;
+    color: #000;
+    font-family: Serif;
   }
 
   #global,
   .flux_content {
-      display: block !important;
+    display: block !important;
   }
 
   .flux_content .content {
-      width: 100% !important;
+    width: 100% !important;
   }
 
   .flux_content .content a {
-      color: #000;
+    color: #000;
   }
 }
 
@@ -872,6 +867,7 @@ option {
 
 .nav-list a:hover {
   text-decoration: none;
+  background-color: var(--hover);
 }
 
 .nav-list .nav-header {
@@ -901,7 +897,7 @@ option {
 .dropdown-menu>.item>a:hover,
 .dropdown-menu>.item>span:hover,
 .dropdown-menu>.item>.as-link:hover {
-  color: var(--accent);
+  color: var(--hover);
   transition: .4s;
 }
 
@@ -996,161 +992,161 @@ option {
 
 @media (max-width: 840px) {
   .aside:target+.close-aside {
-      background: rgba(0, 0, 0, 0.2);
-      display: block;
-      font-size: 0;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      cursor: pointer;
-      z-index: 99;
+    background: rgba(0, 0, 0, 0.2);
+    display: block;
+    font-size: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 99;
   }
 
   .nav_mobile {
-      display: block;
+    display: block;
   }
 
   .aside {
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      overflow: hidden;
-      z-index: 100;
-      transition: width 200ms linear;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    z-index: 100;
+    transition: width 200ms linear;
   }
 
   .aside.aside_feed {
-      padding: 0;
+    padding: 0;
   }
 
   .aside:target,
   .reader .aside:target {
-      width: 90%;
-      height: 100vh;
+    width: 90%;
+    height: 100vh;
   }
 
   .aside_feed .configure-feeds {
-      margin-top: 10px;
+    margin-top: 10px;
   }
 
   .flux_header .item.website {
-      width: 40px;
+    width: 40px;
   }
 
   .flux:not(.current):hover .item.title {
-      position: relative;
-      width: auto;
-      white-space: nowrap;
+    position: relative;
+    width: auto;
+    white-space: nowrap;
   }
 
   .flux .website .favicon {
-      position: relative;
+    position: relative;
   }
 
   .notification {
-      top: 0;
-      left: 0;
-      right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   #nav_entries {
-      width: 100%;
+    width: 100%;
   }
 
   #panel {
-      top: 25px;
-      bottom: 30px;
-      left: 0;
-      right: 0;
+    top: 25px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
   }
 
   #panel .close {
-      top: 0;
-      right: 0;
-      left: auto;
-      bottom: auto;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
   }
 
   #slider.active {
-      left: 0;
-      top: 50px;
-      background-color: var(--bg);
+    left: 0;
+    top: 50px;
+    background-color: var(--bg);
   }
 
   #close-slider img {
-      display: initial;
+    display: initial;
   }
 
   #close-slider.active {
-      background: var(--bg);
-      display: block;
-      width: 100%;
-      height: 50px;
-      z-index: 10;
-      text-align: center;
-      line-height: 50px;
-      border-bottom: 1px solid #ddd;
+    background: var(--bg);
+    display: block;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
   }
 
   .stat.half {
-      grid-column: 1 / span 2;
+    grid-column: 1 / span 2;
   }
 
   .nav_menu .btn {
-      margin: 5px 10px;
+    margin: 5px 10px;
   }
 
   .nav_menu .stick {
-      margin: 0 10px;
+    margin: 0 10px;
   }
 
   .nav_menu .stick .btn {
-      margin: 5px 0;
+    margin: 5px 0;
   }
 
   .nav_menu .search {
-      display: inline-block;
-      max-width: 97%;
+    display: inline-block;
+    max-width: 97%;
   }
 
   .nav_menu .search input {
-      max-width: 97%;
-      width: 90px;
+    max-width: 97%;
+    width: 90px;
   }
 
   .nav_menu .search input:focus {
-      width: 400px;
+    width: 400px;
   }
 
   .post {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .day .name {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   .pagination {
-      margin: 0 0 3.5em;
+    margin: 0 0 3.5em;
   }
 
   .notification a.close {
-      display: block;
-      left: 0;
+    display: block;
+    left: 0;
   }
 
   .notification a.close:hover {
-      opacity: 0.5;
+    opacity: 0.5;
   }
 
   .notification a.close .icon {
-      display: none;
+    display: none;
   }
 }
