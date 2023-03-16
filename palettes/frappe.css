@@ -187,6 +187,10 @@ a.btn {
   color: var(--bg) !important;
 }
 
+.keep_unread .horizontal-list .item .read .icon {
+  filter: invert(74%) sepia(29%) saturate(411%) hue-rotate(171deg) brightness(200%) contrast(95%);
+}
+
 #btn-add.btn-important .icon,
 #actualize .icon {
   filter: brightness(0);
