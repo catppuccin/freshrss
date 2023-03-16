@@ -897,7 +897,8 @@ option {
 .dropdown-menu>.item>a:hover,
 .dropdown-menu>.item>span:hover,
 .dropdown-menu>.item>.as-link:hover {
-  color: var(--hover);
+  color: var(--main-text);
+  background-color: var(--hover);
   transition: .4s;
 }
 
