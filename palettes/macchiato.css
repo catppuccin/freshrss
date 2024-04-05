@@ -191,6 +191,10 @@ a.btn {
   filter: invert(74%) sepia(29%) saturate(411%) hue-rotate(171deg) brightness(200%) contrast(95%);
 }
 
+#btn-add {
+  margin: 0;
+}
+
 #btn-add.btn-important .icon,
 #actualize .icon {
   filter: brightness(0);
@@ -200,10 +204,11 @@ a.btn {
 svg:hover {
   opacity: .8;
   cursor: pointer;
+  border: 0;
 }
 
 .stick input {
-  margin: 0 5px 0 0;
+  margin: 0 0 0 0;
 }
 
 .stick .btn {
