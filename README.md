@@ -36,15 +36,12 @@
 
 ## Usage
 
-1. Copy your desired palette(s) from `palettes` 🗂️
-   - 🌻 [Latte](palettes/latte.css)
-   - 🪴 [Frappé](palettes/frappe.css)
-   - 🌺 [Macchiato](palettes/macchiato.css)
-   - 🌿 [Mocha](palettes/mocha.css)
-2. Navigate to display and change the theme to Nord
-3. Then go to extentions and ensure you have installed the CustomCSS plugin
-4. Click the gear icon and paste the CSS of the Catppuccin theme flavor of your choice
-5. Click submit and refresh the page and your done
+1. Copy the contents of your preferred flavor from [`themes/`](./themes/).
+2. Navigate to **Settings** > **Configuration: Display**.
+3. Change **Theme** to "Nord theme" by joelchrono12.
+4. Navigate to **Configuration: Extensions** and make sure the "Custom CSS" plugin by Marien Fressinaud is installed.
+5. Click the gear icon and paste the CSS copied in Step 1.
+6. Click _Submit_ and refresh the page.
 
 ## 💝 Thanks to
 
