@@ -5,20 +5,20 @@
   --sans-font: Inter, Lato, Helvetica, "IBM Plex Sans", "Roboto", -apple-system, BlinkMacSystemFont, "Nimbus Sans L", Avenir, "Noto Sans", "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
   --mono-font: "mononoki Nerd Font", "IBM Plex Mono", "Roboto Mono", "Ubuntu Mono", "Fira Code", "Overpass Mono", Monaco, "Droid Sans Mono", monospace;
   /*This is my dark themed color scheme*/
-  --bg: #1e1e2e;
-  --accent-bg: rgb(24, 24, 37);
-  --text: #cdd6f4;
-  --text-light: #bac2de;
-  --border: #181825;
-  --accent: #a6adc8;
-  --accent-light: #f38ba8;
-  --code: #fab387;
-  --alert: #a6e3a1;
-  --alert-bg: #74c7ec;
-  --code-bg: #313244;
-  --hover: #585b70;
+  --bg: #303446;
+  --accent-bg: rgb(41, 44, 60);
+  --text: #c6d0f5;
+  --text-light: #b5bfe2;
+  --border: #292c3c;
+  --accent: #a5adce;
+  --accent-light: #e78284;
+  --code: #ef9f76;
+  --alert: #a6d189;
+  --alert-bg: #85c1dc;
+  --code-bg: #414559;
+  --hover: #626880;
 
-  --frss-background-color-transparent: #1e1e2e;
+  --frss-background-color-transparent: #303446;
 }
 
 /*=== GENERAL */
@@ -900,8 +900,6 @@ option {
   transform: rotate(45deg);
   border-color: var(--border);
 }
-
-
 
 .dropdown-menu>.item>a:hover,
 .dropdown-menu>.item>span:hover,
