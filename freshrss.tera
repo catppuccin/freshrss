@@ -673,6 +673,10 @@ li.item.active {
   padding: 2px 5px;
 }
 
+.content pre code {
+  border: none;
+}
+
 .content blockquote {
   margin: 0;
   padding: 5px 20px;
